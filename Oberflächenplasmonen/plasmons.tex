@@ -1,0 +1,111 @@
+\documentclass[twoside,english,headsepline=on,DIV=12]{scrartcl}
+
+\usepackage{shellesc}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+%\setsansfont{DejaVu Sans}
+%\setmonofont{Inconsolata}
+\setmathfont{TeX Gyre Pagella Math}
+%\addtokomafont{disposition}{\normalfont\sffamily}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{stix}
+%\usepackage{color}
+%\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{icomma}
+\usepackage{graphicx}
+\numberwithin{equation}{section}
+\usepackage{siunitx}
+\usepackage{physics}
+
+%%\usepackage{titlesec}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
+\tikzsetexternalprefix{figures/}
+\usepackage{gnuplot-lua-tikz}
+%\usetkzobj{all}
+%\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{url}
+%\urlstyle{same}
+\usepackage{wrapfig}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{booktabs} 
+%\usepackage[]{geometry}
+\usepackage[section]{placeins}
+\usepackage{pdflscape}
+%\usepackage{showframe}
+%\usepackage{MnSymbol}
+%\usepackage[disable]{todonotes}
+\usepackage{extarrows}
+\usepackage[
+	backend=biber 
+]{biblatex}
+\addbibresource{plasmons.bib}
+\usepackage{csquotes} 
+\usepackage{import}
+%\usepackage{fancyhdr}
+\pagestyle{headings}
+
+\begin{document}
+\titlehead{{\Large Universität Stuttgart
+\hfill SS 19\\}
+Physikalisches Praktikum II}
+\subject{Laboratory Report}
+\title{Surface Plasmons}
+\author{David Hoffmann, Marius Tochtermann \\
+Group B30}
+\publishers{}
+\date{15.04.2019}
+\maketitle
+\begin{abstract}
+\end{abstract}
+\tableofcontents
+\newpage
+\begin{figure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel1_650nm.tikz}
+		\caption{Laser wavenlength 650 nm}
+	\end{subfigure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel1_850nm.tikz}
+		\caption{Laser wavenlength 850 nm}
+	\end{subfigure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel2_650nm.tikz}
+		\caption{Laser wavenlength 650 nm}
+	\end{subfigure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel2_850nm.tikz}
+		\caption{Laser wavenlength 850 nm}
+	\end{subfigure}
+	\caption{The reflectivity of the mirror at two different laser wavelenghts}
+\end{figure}
+\begin{figure}
+	\input{plots/prismUncoated.tikz}
+	\caption{The reflectivity of the uncoated prism}
+\end{figure}
+\begin{figure}
+	\input{plots/Ag_650nm.tikz}
+	\caption{Three silver coatings that differ in thickness and a laser wavelength of 650 nm}
+\end{figure}
+\begin{figure}
+	\input{plots/Ag45nm_850nm.tikz}
+	\caption{The same silver coating of 45 nm at two different laser wavelengths of 650 nm and 850 nm}
+\end{figure}
+\begin{figure}
+	\input{plots/Au.tikz}
+	\caption{The gold coating at the two wavelengths of 650 nm and 850 nm}
+\end{figure}
+\begin{figure}
+	\input{plots/pressure.tikz}
+	\caption{Manual messurements of the pressure cell}
+\end{figure}
+\printbibliography
+\end{document} 
+
