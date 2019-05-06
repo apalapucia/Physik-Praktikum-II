@@ -57,8 +57,6 @@
       <file>standard.bbx</file>
       <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
-      <file>ngerman.lbx</file>
-      <file>german.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>

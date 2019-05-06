@@ -1,72 +1,68 @@
-\documentclass[twoside,english,headsepline=on,DIV=12]{scrartcl}
+\RequirePackage{silence} % :-\
+    \WarningFilter{scrreprt}{Usage of package `titlesec'}
+    %\WarningFilter{scrreprt}{Activating an ugly workaround}
+    \WarningFilter{titlesec}{Non standard sectioning command detected}
+    \WarningFilter{latexrelease}{Package latexrelease Warning: Current format date selected, no patches applied}
+\documentclass[ twoside,openright,titlepage,%1headlines,% letterpaper a4paper
+                paper=a4,fontsize=11pt,%11pt,a4paper,%
+                ngerman
+                ]{scrartcl}
 
-\usepackage{shellesc}
+\usepackage[nochapters]{classicthesis}
+\usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{fontspec}
-\usepackage{unicode-math}
-\setmainfont{TeX Gyre Pagella}
-%\setsansfont{DejaVu Sans}
-%\setmonofont{Inconsolata}
-\setmathfont{TeX Gyre Pagella Math}
-%\addtokomafont{disposition}{\normalfont\sffamily}
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-%\usepackage{stix}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\numberwithin{equation}{section}
 %\usepackage{color}
 %\usepackage{enumitem}
-\usepackage[english]{babel}
 \usepackage{icomma}
-\usepackage{graphicx}
-\numberwithin{equation}{section}
-\usepackage{siunitx}
-\usepackage{physics}
-
 %%\usepackage{titlesec}
-\usepackage{tikz}
-\usetikzlibrary{external}
-\tikzexternalize
-\tikzsetexternalprefix{figures/}
-\usepackage{gnuplot-lua-tikz}
+%\usepackage{tikz,tkz-euclide}
 %\usetkzobj{all}
 %\usepackage{adjustbox}
 \usepackage{multirow}
+\usepackage{upgreek}
 \usepackage{url}
-%\urlstyle{same}
 \usepackage{wrapfig}
-\usepackage[font=small, labelfont=bf]{caption}
 \usepackage{subcaption}
 \usepackage{booktabs} 
-%\usepackage[]{geometry}
-\usepackage[section]{placeins}
-\usepackage{pdflscape}
-%\usepackage{showframe}
-%\usepackage{MnSymbol}
-%\usepackage[disable]{todonotes}
-\usepackage{extarrows}
-\usepackage[
-	backend=biber 
-]{biblatex}
-\addbibresource{plasmons.bib}
-\usepackage{csquotes} 
-\usepackage{import}
-%\usepackage{fancyhdr}
-\pagestyle{headings}
-
+\usepackage{geometry}
 \begin{document}
-\titlehead{{\Large Universität Stuttgart
-\hfill SS 19\\}
-Physikalisches Praktikum II}
-\subject{Laboratory Report}
-\title{Surface Plasmons}
-\author{David Hoffmann, Marius Tochtermann \\
-Group B30}
-\publishers{}
-\date{15.04.2019}
-\maketitle
-\begin{abstract}
-\end{abstract}
+\begin{titlepage}
+    % if you want the titlepage to be centered, uncomment and fine-tune the line below (KOMA classes environment)
+    \begin{addmargin}[-1cm]{-3cm}
+    \begin{center}
+        \large
+
+        \hfill
+
+
+        \begingroup
+            \spacedallcaps{} \\ \bigskip
+        \endgroup
+
+	\spacedlowsmallcaps{David Hoffmann, Marius Tochtermann} \\
+	Gruppe: D-05
+
+        \vfill
+
+
+        Assistent: \\ \medskip
+        %\myDegree \\
+        %\myFaculty \\
+	Fortgeschrittenenpraktikum \\
+        Universität Stuttgart\\ \bigskip
+
+	.2019 
+
+        \vfill
+
+    \end{center}
+  \end{addmargin}
+\end{titlepage}
 \tableofcontents
-\newpage
 \section{Theory}
 In order to describe surface plasmons the Maxwell equations are needed, as they are the theoretical fundament of electrodynamics. The four Maxwell equations lead to four boundary conditions at the transition area between two optical mediums, from which two apply to the electric field and two apply to the magnetic field. 
 
@@ -117,6 +113,13 @@ In order to obtain the dispersion relation the cross product of the wave vector 
 \end{align}
 It is important to mention that $\epsilon_\text{r}$ is dependent on $\omega$ and $c=\frac{1}{\sqrt{\epsilon_0 \cdot \mu_0}}$.
 
+As surface plasmons are a phenomenon occuring in the transition area between to mediums, the transition area will be in focus now. The plane between the materials shall be identical with the y-z-plane. Without loss of generality, the wave vector of the incoming light shall be in the x-z-plane. The light shall be p-polarized which means that the electric field does not have a y-component. With this construction the x-component will behave in another way than the z-component. As shown above, the x-component features a steady electric flux density ($\epsilon_1 E_\text{z1} = \epsilon_2 E_\text{z2}$), while the z-component has a steady electric field ($E_\text{x1} = E_\text{x2}$). The wave vector is orthogonal to the electric field, due to the construction that the incoming light has no electric field or wave vector in the y-direction, the wave vector in x-direction is proportional to the dielectric factor while the wave vector in z-direction is the same in both media. Combined with the dispersion relation, the following connections can be build:
+\begin{align}
+k_\text{z}^2 &= \frac{\omega^2}{c^2} \frac{\epsilon_1 \epsilon_2}{\epsilon_1 + \epsilon_2} \label{eq:WavevectorZ} \\
+k_\text{i}^2 &= \frac{\omega^2}{c^2} \frac{\epsilon_\text{i}^2}{\epsilon_1 + \epsilon_2} \label{eq:WavevectorI} \ \ \ \ \  i=1,2
+\end{align}
+In order to obtain surface plasmons an evanescent wave on both sides of the transition area is needed, this means that the electric field is decreasing its amount exponentially with an increasing distance to the transit area. To get a evanescent field $k_\text{i}^2$ needs to be smaller than zero. Surface plasmons are propagating along the transit area, this means that $k_\text{z}^2$ needs to be larger than zero ($k_\text{y}^2$ is zero due to the geometric construction). 
+
 A closer look at the equations \ref{eq:WavevectorZ} and \ref{eq:WavevectorI} reveals, that the both dielectric functions need to have opposite signs. What seems to be impossible in the first place can be explained with the Drude model, which applies to media with free electrons such as metals. 
 
 In the Drude model the dielectric function is not a real but a complex function. The Drude model is based on diffential equation with three forces. The inertia force of the electron, a damping force (electrical resistance etc.) depending on the drift velocity of the electron and the force of the electric field of the incoming electromagnetic wave on the electron:
@@ -136,47 +139,4 @@ P_0 &= -n \cdot e \cdot r_0 = \frac{-n \cdot e^2 \cdot E_0}{m(\omega(\omega - i 
 \text{mit} \ \ \omega_\text{p}& = \sqrt{\frac{n \cdot e^2}{\epsilon_0 \cdot m}} \label{eq:PlasmaFrequency}
 \end{align}
 
-
-
-\begin{figure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel1_650nm.tikz}
-		\caption{Laser wavenlength 650 nm}
-	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel1_850nm.tikz}
-		\caption{Laser wavenlength 850 nm}
-	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel2_650nm.tikz}
-		\caption{Laser wavenlength 650 nm}
-	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel2_850nm.tikz}
-		\caption{Laser wavenlength 850 nm}
-	\end{subfigure}
-	\caption{The reflectivity of the mirror at two different laser wavelenghts}
-\end{figure}
-\begin{figure}
-	\input{plots/prismUncoated.tikz}
-	\caption{The reflectivity of the uncoated prism}
-\end{figure}
-\begin{figure}
-	\input{plots/Ag_650nm.tikz}
-	\caption{Three silver coatings that differ in thickness and a laser wavelength of 650 nm}
-\end{figure}
-\begin{figure}
-	\input{plots/Ag45nm_850nm.tikz}
-	\caption{The same silver coating of 45 nm at two different laser wavelengths of 650 nm and 850 nm}
-\end{figure}
-\begin{figure}
-	\input{plots/Au.tikz}
-	\caption{The gold coating at the two wavelengths of 650 nm and 850 nm}
-\end{figure}
-\begin{figure}
-	\input{plots/pressure.tikz}
-	\caption{Manual messurements of the pressure cell}
-\end{figure}
-\printbibliography
-\end{document} 
-
+\end{document}

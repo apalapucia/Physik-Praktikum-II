@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.12)  24 APR 2019 10:00
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  1 MAY 2019 14:24
  system commands enabled.
 **\def\tikzexternalrealjob{plasmons}\input{plasmons}
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
@@ -20,7 +20,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.331 seconds
+luaotfload | main : initialization completed in 0.180 seconds
 (./plasmons.tex (/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/01/03 v3.22 KOMA-Script document class (article)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -748,11 +748,13 @@ Package: babel 2017/05/19 3.10 The Babel package
 (/usr/share/texmf-dist/tex/generic/babel/luababel.def
 \l@dumylang=\language1
 \l@nohyphenation=\language2
-\l@german-x-2017-03-31=\language3
-\l@ngerman-x-2017-03-31=\language4
-\l@german=\language5
-\l@ngerman=\language6
-\l@swissgerman=\language7
+\l@ukenglish=\language3
+\l@usenglishmax=\language4
+\l@german-x-2017-03-31=\language5
+\l@ngerman-x-2017-03-31=\language6
+\l@german=\language7
+\l@ngerman=\language8
+\l@swissgerman=\language9
 ) (/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/01/24 v3.3q English support from the babel system
 (/usr/share/texmf-dist/tex/generic/babel/babel.def
@@ -760,21 +762,10 @@ File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count154
 \U@D=\dimen146
 (/usr/share/texmf-dist/tex/generic/babel/luababel.def))
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-) (/usr/share/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2016/11/02 v2.9 German support for babel (new orthography)
-(/usr/share/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2016/11/02 v2.9 German support for babel (new orthography)
-Package babel Info: Making " an active character on input line 125.
-(/usr/share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-de-1996.tex UTF-
-8 German hyphenation patterns (reformed orthography) (/usr/share/texmf-dist/tex
-/generic/hyph-utf8/patterns/tex/hyph-de-1996.tex
-German Hyphenation Patterns (Reformed Orthography, 2006) `dehyphn-x' 2017-03-31
- (WL)))))) (/usr/share/texmf-dist/tex/latex/was/icomma.sty
+)) (/usr/share/texmf-dist/tex/latex/was/icomma.sty
 Package: icomma 2002/03/10 v2.0 (WaS)
 ) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
@@ -2393,15 +2384,6 @@ File: csquotes.cfg
 )) (/usr/share/texmf-dist/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
 )
-Package biblatex Info: Trying to load language 'ngerman'...
-Package biblatex Info: ... file 'ngerman.lbx' found.
-(/usr/share/texmf-site/tex/latex/biblatex/lbx/ngerman.lbx
-File: ngerman.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
-(/usr/share/texmf-site/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
-))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (/usr/share/texmf-site/tex/latex/biblatex/lbx/english.lbx
@@ -2410,7 +2392,7 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
 No file figures/plasmons-figure1.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
@@ -2513,14 +2495,41 @@ Non-PDF special ignored!
 
 
 
-{/home/ulysses/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+{/home/ulysses/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./plot
+s/spiegel2_650nm.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
+) (./plots/spiegel2_850nm.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 71--87
+[]$[]$ $[]$
+ []
 
-LaTeX Warning: Empty bibliography on input line 79.
+(./plots/prismUncoated.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
+) (./plots/Ag_650nm.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
+) (./plots/Ag45nm_850nm.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
+) (./plots/Au.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
+) (./plots/pressure.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
+)
+
+LaTeX Warning: Empty bibliography on input line 109.
 
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sl' in size <10.95> not a
 vailable
 (Font)              Font shape `TU/TeXGyrePagella(0)/m/it' tried instead on inpu
-t line 80.
+t line 110.
 
 LaTeX Warning: There were undefined references.
 
@@ -2535,15 +2544,16 @@ Package logreq Info: Writing requests to 'figures/plasmons-figure1.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40714 strings out of 494527
+ 40704 strings out of 494527
  100000,1648299 words of node,token memory allocated
- 581 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 1 kern, 8 attribute, 69 glue_spec, 8 attrib
+ 547 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 7 attribute, 69 glue_spec, 7 attrib
 ute_list, 1 write nodes
-   avail lists: 1:4,2:8748,3:2354,4:17,5:54,6:193,7:2067,8:5,9:155,10:2,11:29
- 43500 multiletter control sequences out of 65536+600000
- 68 fonts using 17311319 bytes
- 71i,12n,71p,8856b,1590s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:4,2:8756,3:2354,4:43,5:219,6:1194,7:2075,8:33,9:158,10:18,11:9
+3
+ 43463 multiletter control sequences out of 65536+600000
+ 70 fonts using 17660851 bytes
+ 71i,12n,71p,8856b,1596s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf
 ></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.
 otf>

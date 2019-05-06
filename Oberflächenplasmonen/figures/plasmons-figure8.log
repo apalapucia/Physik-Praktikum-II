@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  1 MAY 2019 13:12
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  1 MAY 2019 14:25
  system commands enabled.
 **\def\tikzexternalrealjob{plasmons}\input{plasmons}
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
@@ -20,7 +20,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.325 seconds
+luaotfload | main : initialization completed in 0.178 seconds
 (./plasmons.tex (/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/01/03 v3.22 KOMA-Script document class (article)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -2550,7 +2550,7 @@ Here is how much of LuaTeX's memory you used:
 ute_list, 1 write nodes
    avail lists: 1:4,2:3278,3:1072,4:48,5:219,6:1194,7:799,8:33,9:274,10:18,11:93
  43464 multiletter control sequences out of 65536+600000
- 70 fonts using 17660927 bytes
+ 70 fonts using 17661079 bytes
  71i,10n,71p,8856b,1596s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf
 ></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.

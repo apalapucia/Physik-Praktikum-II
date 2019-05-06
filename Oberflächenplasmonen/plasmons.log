@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  1 MAY 2019 13:12
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  6 MAY 2019 12:52
  system commands enabled.
 **plasmons.tex
 (./plasmons.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.333 seconds
+luaotfload | main : initialization completed in 0.189 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/01/03 v3.22 KOMA-Script document class (article)
@@ -2629,57 +2629,70 @@ LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
 Non-PDF special ignored!
 
 
-{/home/ulysses/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./plots
-/spiegel1_650nm.tikz
+{/home/ulysses/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sl' in size <10.95> not a
+vailable
+(Font)              Font shape `TU/TeXGyrePagella(0)/m/it' tried instead on inpu
+t line 111.
+ [2]
+
+LaTeX Warning: Reference `eq:WavevectorZ' on page 3 undefined on input line 120.
+
+
+
+LaTeX Warning: Reference `eq:WavevectorI' on page 3 undefined on input line 120.
+
+
+(./plots/spiegel1_650nm.tikz
 ===== Image 'figures/plasmons-figure0' is up-to-date. ======
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--144
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--144
 
  []
 
 (./plots/spiegel1_850nm.tikz
 ===== Image 'figures/plasmons-figure1' is up-to-date. ======
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--77
+Underfull \hbox (badness 10000) in paragraph at lines 1--148
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--77
+Underfull \hbox (badness 10000) in paragraph at lines 1--148
 
  []
 
 (./plots/spiegel2_650nm.tikz
 ===== Image 'figures/plasmons-figure2' is up-to-date. ======
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--81
+Underfull \hbox (badness 10000) in paragraph at lines 1--152
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--81
+Underfull \hbox (badness 10000) in paragraph at lines 1--152
 
  []
 
 (./plots/spiegel2_850nm.tikz
 ===== Image 'figures/plasmons-figure3' is up-to-date. ======
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--85
+Underfull \hbox (badness 10000) in paragraph at lines 1--156
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--85
+Underfull \hbox (badness 10000) in paragraph at lines 1--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--87
+Underfull \hbox (badness 10000) in paragraph at lines 142--158
 []$[]$ $[]$
  []
 
@@ -2692,51 +2705,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--87
 ) (./plots/Au.tikz
 ===== Image 'figures/plasmons-figure7' is up-to-date. ======
 ) (./plots/pressure.tikz
-\openout3 = figures/plasmons-figure8.md5
-
-===== 'mode=convert with system call': Invoking 'lualatex -shell-escape -halt-on
--error -interaction=batchmode -jobname "figures/plasmons-figure8" "\def\tikzexte
-rnalrealjob{plasmons}\input{plasmons}"' ========
-
-\openout3 = plasmons.auxlock
-
-\openout3 = plasmons.auxlock
+===== Image 'figures/plasmons-figure8' is up-to-date. ======
 )
 
-LaTeX Warning: Empty bibliography on input line 109.
+LaTeX Warning: Empty bibliography on input line 180.
 
-LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sl' in size <10.95> not a
-vailable
-(Font)              Font shape `TU/TeXGyrePagella(0)/m/it' tried instead on inpu
-t line 110.
-[2<./figures/plasmons-figure0.pdf><./figures/plasmons-figure1.pdf><./figures/pla
-smons-figure2.pdf><./figures/plasmons-figure3.pdf>] [3<./figures/plasmons-figure
-4.pdf><./figures/plasmons-figure5.pdf>] [4<./figures/plasmons-figure6.pdf><./fig
-ures/plasmons-figure7.pdf>] [5<./figures/plasmons-figure8.pdf>]
+[3] [4<./figures/plasmons-figure0.pdf><./figures/plasmons-figure1.pdf><./figures
+/plasmons-figure2.pdf><./figures/plasmons-figure3.pdf>] [5<./figures/plasmons-fi
+gure4.pdf><./figures/plasmons-figure5.pdf>] [6<./figures/plasmons-figure6.pdf><.
+/figures/plasmons-figure7.pdf>] [7<./figures/plasmons-figure8.pdf>]
 (./plasmons.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'plasmons.run.xml'.
 
 \openout1 = plasmons.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 40821 strings out of 494527
+ 40837 strings out of 494527
  100000,1648299 words of node,token memory allocated
- 547 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 7 attribute, 69 glue_spec, 7 attrib
+ 566 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 7 attribute, 71 glue_spec, 7 attrib
 ute_list, 1 write nodes
-   avail lists: 1:4,2:346,3:65,4:43,5:98,6:541,7:248,8:42,9:115,10:18,11:38
- 43445 multiletter control sequences out of 65536+600000
- 69 fonts using 17486275 bytes
- 70i,8n,71p,8818b,1600s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-italic.otf>
-</usr/share/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></usr/share/te
-xmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf></usr/share/texm
-f-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf>
-Output written on plasmons.pdf (5 pages, 136252 bytes).
+   avail lists: 1:4,2:769,3:125,4:43,5:364,6:2214,7:811,8:81,9:511,10:18,11:171
+ 43466 multiletter control sequences out of 65536+600000
+ 71 fonts using 17835503 bytes
+ 70i,12n,71p,8818b,1630s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.o
+tf></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-mat
+h.otf></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-
+math.otf></usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-it
+alic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></usr
+/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf></usr/s
+hare/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf>
+Output written on plasmons.pdf (7 pages, 155206 bytes).
 
-PDF statistics: 232 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
+PDF statistics: 259 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  1 MAY 2019 12:59
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  1 MAY 2019 14:24
  system commands enabled.
 **\def\tikzexternalrealjob{plasmons}\input{plasmons}
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
@@ -20,7 +20,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.327 seconds
+luaotfload | main : initialization completed in 0.199 seconds
 (./plasmons.tex (/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/01/03 v3.22 KOMA-Script document class (article)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -2518,14 +2518,17 @@ sable this.
 ) (./plots/Au.tikz
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
 sable this.
+) (./plots/pressure.tikz
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
+sable this.
 )
 
-LaTeX Warning: Empty bibliography on input line 105.
+LaTeX Warning: Empty bibliography on input line 109.
 
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sl' in size <10.95> not a
 vailable
 (Font)              Font shape `TU/TeXGyrePagella(0)/m/it' tried instead on inpu
-t line 106.
+t line 110.
 
 LaTeX Warning: There were undefined references.
 
@@ -2540,14 +2543,14 @@ Package logreq Info: Writing requests to 'figures/plasmons-figure3.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40691 strings out of 494527
+ 40704 strings out of 494527
  100000,1648299 words of node,token memory allocated
  547 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 7 attribute, 69 glue_spec, 7 attrib
 ute_list, 1 write nodes
-   avail lists: 1:4,2:2972,3:874,4:43,5:204,6:1072,7:705,8:30,9:152,10:18,11:82
- 43459 multiletter control sequences out of 65536+600000
- 70 fonts using 17661003 bytes
+   avail lists: 1:4,2:2972,3:874,4:43,5:219,6:1194,7:705,8:33,9:152,10:18,11:93
+ 43463 multiletter control sequences out of 65536+600000
+ 70 fonts using 17660927 bytes
  71i,12n,71p,8856b,1596s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf
 ></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.
