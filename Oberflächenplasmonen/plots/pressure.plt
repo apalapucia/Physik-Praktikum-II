@@ -3,7 +3,7 @@ set terminal tikz color
 file1 = "../data/pressure.csv"
 
 set xlabel 'Angle $\alpha$ [°]'
-set ylabel 'Voltage [V]'
+set ylabel 'Preasure $p$ [bar]'
 
 set output "pressure.tikz"
 f1(x) = a1*x + b1

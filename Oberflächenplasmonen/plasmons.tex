@@ -136,8 +136,20 @@ P_0 &= -n \cdot e \cdot r_0 = \frac{-n \cdot e^2 \cdot E_0}{m(\omega(\omega - i 
 \text{mit} \ \ \omega_\text{p}& = \sqrt{\frac{n \cdot e^2}{\epsilon_0 \cdot m}} \label{eq:PlasmaFrequency}
 \end{align}
 
+\section{Experimental Setup}
+The setup consists of two lasers at wavelength 850 nm and 650 nm respectively, which are directed through two polarizers, the first one being of variable angle, the second one of fixed angle. With the first the intensity of the light can be adjusted, while the second one ensures the correct polarity of the exiting light. The next element is a mirror which is mounted on a rotatable desk to which a step motor is connected. Further down in the light path at an angle of 90° to the prior ``arm'' are two lenses that are positioned in a way as to act as a telescope. This is done to keep the light focused on the prism -- which stands behind the two lenses -- while allowing for small rotations of the mirror. After the prism there are again two lenses at an 90° angle to the previous elements that again serve the same purpose of focusing the light into the sensor at the end of the setup.
+\subsection{Reflectivity of the mirror}
+First the reflectivity of the mirror is to be measured, i.e. the intensity of the reflected light for different angles $\alpha$ of the mirror. In order for that to be done instead of the prism the photo sensor gets placed behind the two lenses focusing the light reflected from the mirror. The mirror is then rotated 2.5° in each direction from the ``zeroed'' position of 45°. This is done with both lasers. 
+\subsection{Reflectivity of the uncoated prism}
+Next the proper setup is restored with the uncoated prism. The intensity of the light is measured for a small change in the angle $\alpha$ of the mirror. This is done with the 650 nm laser.
+\subsection{Reflectivity of the coated prisms}
+With all the reference measurements performed, the actual coatings are used to observe the surface plasmons. Three silver coating of thickness 40 nm, 45 nm and 55 nm are measured at a wavelength of 650 nm and the 45 nm is additionaly measured at 850 nm. Subsequently the gold coated prism is installed and measured at both wavelengths of 650 nm and 850 nm. 
+\subsection{Reflectivity of the preasure cell}
+Finally the preasure cell which contains the gold coating is put under a 2 bar atmosphere of nitrogen while the mirror is oscillating close to its resonance frequency. Manually the minimum of the measured intensity is set by altering the frequency in such a way that the resulting intensity is oscillating at double the frequency of the mirror. Then the step motor in combination with the lock-in amplifier is used to keep the minimum while releasing the gas out of the cell and thereby lowering the preasure back to the ambiant value. 
 
-
+\section{Results}
+\subsection{Reflectivity of the mirror}
+The results of the measurement of the mirror are depicted in Figure \ref{fig:mirror}. The intensity of the reflected light does not show the expected form of a parabola but instead resembles no function. 
 \begin{figure}
 	\begin{subfigure}{.48\textwidth}
 		\input{plots/spiegel1_650nm.tikz}
@@ -156,26 +168,48 @@ P_0 &= -n \cdot e \cdot r_0 = \frac{-n \cdot e^2 \cdot E_0}{m(\omega(\omega - i 
 		\caption{Laser wavenlength 850 nm}
 	\end{subfigure}
 	\caption{The reflectivity of the mirror at two different laser wavelenghts}
+	\label{fig:mirror}
 \end{figure}
+\subsection{Reflectivity of the uncoated prism}
+The intensity of the reflected light of the uncoated prism is shown in Figure \ref{fig:uncoated}. It shows a clear transition from a very low reflectivity to a very high on between $\alpha = -1.8°$ and $\alpha = -0.8°$.
 \begin{figure}
 	\input{plots/prismUncoated.tikz}
 	\caption{The reflectivity of the uncoated prism}
+	\label{fig:uncoated}
 \end{figure}
+\subsection{Reflectivity of the coated prisms}
+The intensities of the three silver coating are shown in Figure \ref{fig:Ag}. They all show a clear minimum at a specific angle, of which the 45 nm coating is the most pronounced, since it was in a much better conditions than the other two. Those comparatively bad conditions of the other two may explain their less than ideal form. Curiously the 45 nm coating has its minimum at the smallest angle, followed by the 55 nm coating and lastly the 40 nm coating. 
 \begin{figure}
 	\input{plots/Ag_650nm.tikz}
 	\caption{Three silver coatings that differ in thickness and a laser wavelength of 650 nm}
+	\label{fig:Ag}
 \end{figure}
+In Figure \ref{fig:Ag2} the intensities for the silver coating of 45 nm thickness, which was chosen because of its good condition, are shown for the two different wavelengths of 650 nm and 850 nm. Ignoring the absolute values of the signal, the minimum at 850 nm is more pronounced than the one at 650 nm and also appears at an smaller angle. 
 \begin{figure}
 	\input{plots/Ag45nm_850nm.tikz}
 	\caption{The same silver coating of 45 nm at two different laser wavelengths of 650 nm and 850 nm}
+	\label{fig:Ag2}
 \end{figure}
+The intensities of the gold coating at the two different wavelengths as depicted in Figure \ref{fig:Au} show a slightly different form than the silver coatings. The also feature a clear minimum, but right before the minimum the intensity goes up to a (compared to the minimum) small maximum. The value after the minimum is also smaller than before it. Lastly the minimum at 850 nm is less pronounced and occurs at a smaller angle than the one at 650 nm.
 \begin{figure}
 	\input{plots/Au.tikz}
 	\caption{The gold coating at the two wavelengths of 650 nm and 850 nm}
+	\label{fig:Au}
 \end{figure}
+\subsection{Reflectivity of the preasure cell}
+The final measurements of the preasure cell are shown in Figure \ref{fig:preasure}. Two measurements were taken, one with the ambiant light on, on with the ambiant light off. The data follows a clear linear relation between the angle and the preasure. A fit function of the form
+\[
+y(\alpha) = m\cdot\alpha + c
+\]
+has been applied to both, resulting in 
+\begin{align*}
+y_1(\alpha) &= -24.34\cdot\alpha + 0.73 \\
+y_2(\alpha) &= -25.2 \cdot\alpha + 0.74 \\
+\end{align*}
 \begin{figure}
 	\input{plots/pressure.tikz}
 	\caption{Manual messurements of the pressure cell}
+	\label{fig:preasure}
 \end{figure}
 \printbibliography
 \end{document} 
