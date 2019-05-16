@@ -40,4 +40,4 @@ for file in files:
     #plt.plot(Time,Auto)
     #plt.xscale(log)
     #plt.show()
-    np.savetxt("Auto" + file,np.c_[Time,Auto],header='Zeit [s], Autokorrelation')
+    np.savetxt(file + "Auto" ,np.c_[Time,Auto],header='Zeit [s], Autokorrelation')
