@@ -1,0 +1,223 @@
+\documentclass[twoside,english,headsepline=on,DIV=12]{scrartcl}
+
+\usepackage{shellesc}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+%\setsansfont{DejaVu Sans}
+%\setmonofont{Inconsolata}
+\setmathfont{TeX Gyre Pagella Math}
+%\addtokomafont{disposition}{\normalfont\sffamily}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{stix}
+%\usepackage{color}
+%\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{icomma}
+\usepackage{graphicx}
+\numberwithin{equation}{section}
+\usepackage{siunitx}
+\usepackage{physics}
+
+%%\usepackage{titlesec}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
+\tikzsetexternalprefix{figures/}
+\usepackage{gnuplot-lua-tikz}
+%\usetkzobj{all}
+%\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{url}
+%\urlstyle{same}
+\usepackage{wrapfig}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{booktabs} 
+%\usepackage[]{geometry}
+\usepackage[section]{placeins}
+\usepackage{pdflscape}
+%\usepackage{showframe}
+%\usepackage{MnSymbol}
+%\usepackage[disable]{todonotes}
+\usepackage{extarrows}
+\usepackage[
+	backend=biber 
+]{biblatex}
+\addbibresource{plasmons.bib}
+\usepackage{csquotes} 
+\usepackage{import}
+%\usepackage{fancyhdr}
+\pagestyle{headings}
+
+\begin{document}
+\titlehead{{\Large Universität Stuttgart
+\hfill SS 19\\}
+Physikalisches Praktikum II}
+\subject{Laboratory Report}
+\title{Surface Plasmons}
+\author{David Hoffmann, Marius Tochtermann \\
+Group B30}
+\publishers{}
+\date{15.04.2019}
+\maketitle
+\begin{abstract}
+\end{abstract}
+\tableofcontents
+\newpage
+\section{Theory}
+In order to describe surface plasmons the Maxwell equations are needed, as they are the theoretical fundament of electrodynamics. The four Maxwell equations lead to four boundary conditions at the transition area between two optical mediums, from which two apply to the electric field and two apply to the magnetic field. 
+
+The first maxwell equation
+\begin{align}
+\vec{\nabla} \cdot \vec{D} = \vec{\nabla} \cdot \vec{E}\cdot \epsilon_0 \cdot \epsilon_\text{r} =  \rho_\text{frei} \label{eq:Maxwell1}
+\end{align}
+leads to the condition that the electric flux density needs to be steady in the direction perpendicular to the transition surface, as the density of electrical charges $\rho_\text{frei}$ equals zero inside the transition area. Due to the fact that the $\epsilon_\text{r}$ of the two media are not the same, the electric field is not steady.
+
+Like the first Maxwell equation describes the electric flux density, the second Maxwell equation is about the magnetic flux density. Thus that no magnetic monopoles exist, the right side of the second Maxwell equation
+\begin{align}
+\vec{\nabla} \cdot \vec{B} = \vec{\nabla} \cdot \vec{H}\cdot \mu_0 \cdot \mu_\text{r} =  0 \label{eq:Maxwell2}
+\end{align}
+always equals zero. Like the electric flux density, the magnetic flux density needs to be steady in the direction perpendicular to the transit area. In most cases, the magnetic permeability is close to one. As a result the magnetic field can be assumed as steady too.
+
+The third Maxwell equation 
+\begin{align}
+\vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \label{eq:Maxwell3}
+\end{align}
+can be used to describe the electric field parallel to the transition area. In consequence of the second Maxwell equation the magnetic flux density is steady. This leads, coupled with the third Maxwell equation, to a steadiness of the electric field parallel to the transition area.
+
+The last Maxwell equation 
+\begin{align}
+\vec{\nabla} \times \vec{H} = \vec{j_\text{frei}} + \frac{\partial \vec{D}}{\partial t} \label{eq:Maxwell4}
+\end{align}
+is about the magnetic field. The absence of free charges leads to an absence of a current density ($\overrightarrow{j_\text{frei}} = 0$). With the steadiness of the electric flux density resulting from the first Maxwell equation, the magnetic field parallel to the transit area is steady too.
+
+In absence of free electrical charges, the third and fourth Maxwell equation can be combined to the wave equation:
+\begin{align}
+\vec{\nabla}^2 \vec{E} = \epsilon_0 \epsilon_\text{r} \mu_0 \mu_\text{r} \frac{\partial^2}{\partial t^2} \vec{E} \label{eq:Waveequation}
+\end{align} 
+The wave equation can be solved with the approach of a plane wave. With linear combinations of plane waves, every other wave form can be build. A plane electromagnetical wave is described as
+\begin{align}
+\vec{E} = \vec{E_0} exp(\vec{k}\vec{r} - \omega t)
+\end{align}
+The approach for the magnetic field is identical. With those approaches the Maxwell equations can be written as:
+\begin{align}
+\vec{k} \cdot \vec{D} &= 0 \label{eq:Maxwell1alt} \\
+\vec{k} \cdot \vec{B} &= 0 \label{eq:Maxwell2alt} \\
+\vec{k} \times \vec{E} &= \omega \vec{B} \label{eq:Maxwell3alt} \\
+\vec{k} \times \vec{H} &= -\omega \epsilon_0 \epsilon_r \vec{E} \label{eq:Maxwell4alt}
+\end{align}
+For further considerations the dispersion relation is very important. The dispersion relation describes the correlation between the absolut amount of the wavevector $k$ and the angular velocity $\omega$. The dispersion relation can be used to calculate the phase velocity $\frac{\omega}{k}$ and the group velocity $\frac{d\omega}{dk}$. 
+
+In order to obtain the dispersion relation the cross product of the wave vector $k$ and equation \ref{eq:Maxwell3alt} is calculated. The result is
+\begin{align}
+\vec{k}^2 = \epsilon_\text{r} \frac{\omega^2}{c^2} \label{eq:Dispersionrelation}
+\end{align}
+It is important to mention that $\epsilon_\text{r}$ is dependent on $\omega$ and $c=\frac{1}{\sqrt{\epsilon_0 \cdot \mu_0}}$.
+
+A closer look at the equations \ref{eq:WavevectorZ} and \ref{eq:WavevectorI} reveals, that the both dielectric functions need to have opposite signs. What seems to be impossible in the first place can be explained with the Drude model, which applies to media with free electrons such as metals. 
+
+In the Drude model the dielectric function is not a real but a complex function. The Drude model is based on diffential equation with three forces. The inertia force of the electron, a damping force (electrical resistance etc.) depending on the drift velocity of the electron and the force of the electric field of the incoming electromagnetic wave on the electron:
+\begin{align}
+m \frac{\partial v}{\partial t} + m \frac{v_\text{d}}{\tau} &= -e E \label{eq:Drude1} \\
+m \frac{d^2 r}{dt^2} + m \Gamma \frac{dr}{dt} &= -e E_0 exp(-i \omega t) \label{eq:Drude2} \ \ \ \ \ \Gamma = \frac{1}{\tau}
+\end{align}
+The solution of equation \ref{eq:Drude2} is an oscillating function:
+\begin{align}
+r(t) = r_0 exp(-i \omega t) = \frac{e E_0}{m(\omega(\omega - i \Gamma))} exp(-i \omega t) \label{eq:DrudeSolution}
+\end{align}
+
+The dielectric function is dependent on the polarizability of the medium. The polarizibility can be calculated as the Polarisation divided by the electric field:
+\begin{align}
+P_0 &= -n \cdot e \cdot r_0 = \frac{-n \cdot e^2 \cdot E_0}{m(\omega(\omega - i \Gamma))} \label{eq:Polarisation} \\
+\epsilon (\omega) &= 1 + \frac{P_0}{\epsilon_0 \cdot E_0} = 1 - \frac{n \cdot e^2}{\epsilon_0 \cdot m(\omega(\omega - i \Gamma))} = 1 - \frac{\omega_\text{p}^2}{\omega(\omega - i \Gamma)} \label{eq:DielectricFunction} \\
+\text{mit} \ \ \omega_\text{p}& = \sqrt{\frac{n \cdot e^2}{\epsilon_0 \cdot m}} \label{eq:PlasmaFrequency}
+\end{align}
+
+\section{Experimental Setup}
+The setup consists of two lasers at wavelength 850 nm and 650 nm respectively, which are directed through two polarizers, the first one being of variable angle, the second one of fixed angle. With the first the intensity of the light can be adjusted, while the second one ensures the correct polarity of the exiting light. The next element is a mirror which is mounted on a rotatable desk to which a step motor is connected. Further down in the light path at an angle of 90° to the prior ``arm'' are two lenses that are positioned in a way as to act as a telescope. This is done to keep the light focused on the prism -- which stands behind the two lenses -- while allowing for small rotations of the mirror. After the prism there are again two lenses at an 90° angle to the previous elements that again serve the same purpose of focusing the light into the sensor at the end of the setup. 
+A schematic drawing of the setup is shown in Figure \ref{fig:setup}.
+\begin{figure}
+	\centering
+	\includegraphics[scale=.6]{setup.png}
+	\caption{The setup of the experiment\cite{anleitung}}
+	\label{fig:setup}
+\end{figure}
+\subsection{Reflectivity of the mirror}
+First the reflectivity of the mirror is to be measured, i.e. the intensity of the reflected light for different angles $\alpha$ of the mirror. In order for that to be done instead of the prism the photo sensor gets placed behind the two lenses focusing the light reflected from the mirror. The mirror is then rotated 2.5° in each direction from the ``zeroed'' position of 45°. This is done with both lasers. 
+\subsection{Reflectivity of the uncoated prism}
+Next the proper setup is restored with the uncoated prism. The intensity of the light is measured for a small change in the angle $\alpha$ of the mirror. This is done with the 650 nm laser.
+\subsection{Reflectivity of the coated prisms}
+With all the reference measurements performed, the actual coatings are used to observe the surface plasmons. Three silver coating of thickness 40 nm, 45 nm and 55 nm are measured at a wavelength of 650 nm and the 45 nm is additionaly measured at 850 nm. Subsequently the gold coated prism is installed and measured at both wavelengths of 650 nm and 850 nm. 
+\subsection{Reflectivity of the preasure cell}
+Finally the preasure cell which contains the gold coating is put under a 2 bar atmosphere of nitrogen while the mirror is oscillating close to its resonance frequency. Manually the minimum of the measured intensity is set by altering the frequency in such a way that the resulting intensity is oscillating at double the frequency of the mirror. Then the step motor in combination with the lock-in amplifier is used to keep the minimum while releasing the gas out of the cell and thereby lowering the preasure back to the ambiant value. 
+
+\section{Results}
+\subsection{Reflectivity of the mirror}
+The results of the measurement of the mirror are depicted in Figure \ref{fig:mirror}. The intensity of the reflected light does not show the expected form of a parabola but instead resembles no function. 
+\begin{figure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel1_650nm.tikz}
+		\caption{Laser wavenlength 650 nm}
+	\end{subfigure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel1_850nm.tikz}
+		\caption{Laser wavenlength 850 nm}
+	\end{subfigure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel2_650nm.tikz}
+		\caption{Laser wavenlength 650 nm}
+	\end{subfigure}
+	\begin{subfigure}{.48\textwidth}
+		\input{plots/spiegel2_850nm.tikz}
+		\caption{Laser wavenlength 850 nm}
+	\end{subfigure}
+	\caption{The reflectivity of the mirror at two different laser wavelenghts}
+	\label{fig:mirror}
+\end{figure}
+\subsection{Reflectivity of the uncoated prism}
+The intensity of the reflected light of the uncoated prism is shown in Figure \ref{fig:uncoated}. It shows a clear transition from a very low reflectivity to a very high on between $\alpha = -1.8°$ and $\alpha = -0.8°$. The critical angle of total reflectivity is determined to be $\alpha_\text{crit} = -0.77°$.
+\begin{figure}
+	\input{plots/prismUncoated.tikz}
+	\caption{The reflectivity of the uncoated prism}
+	\label{fig:uncoated}
+\end{figure}
+\subsection{Reflectivity of the coated prisms}
+The intensities of the three silver coating are shown in Figure \ref{fig:Ag}. They all show a clear minimum at a specific angle, of which the 45 nm coating is the most pronounced, since it was in a much better conditions than the other two. Those comparatively bad conditions of the other two may explain their less than ideal form. Curiously the 45 nm coating has its minimum at the smallest angle, followed by the 55 nm coating and lastly the 40 nm coating. 
+\begin{figure}
+	\input{plots/Ag_650nm.tikz}
+	\caption{Three silver coatings that differ in thickness and a laser wavelength of 650 nm}
+	\label{fig:Ag}
+\end{figure}
+In Figure \ref{fig:Ag2} the intensities for the silver coating of 45 nm thickness, which was chosen because of its good condition, are shown for the two different wavelengths of 650 nm and 850 nm. Ignoring the absolute values of the signal, the minimum at 850 nm is more pronounced than the one at 650 nm and also appears at an smaller angle. 
+\begin{figure}
+	\input{plots/Ag45nm_850nm.tikz}
+	\caption{The same silver coating of 45 nm at two different laser wavelengths of 650 nm and 850 nm}
+	\label{fig:Ag2}
+\end{figure}
+The intensities of the gold coating at the two different wavelengths as depicted in Figure \ref{fig:Au} show a slightly different form than the silver coatings. The also feature a clear minimum, but right before the minimum the intensity goes up to a (compared to the minimum) small maximum. The value after the minimum is also smaller than before it. Lastly the minimum at 850 nm is less pronounced and occurs at a smaller angle than the one at 650 nm.
+\begin{figure}
+	\input{plots/Au.tikz}
+	\caption{The gold coating at the two wavelengths of 650 nm and 850 nm}
+	\label{fig:Au}
+\end{figure}
+\subsection{Reflectivity of the preasure cell}
+The final measurements of the preasure cell are shown in Figure \ref{fig:preasure}. Two measurements were taken, one with the ambiant light on, on with the ambiant light off. The data follows a clear linear relation between the angle and the preasure. A fit function of the form
+\[
+y(\alpha) = m\cdot\alpha + c
+\]
+has been applied to both, resulting in 
+\begin{align*}
+y_1(\alpha) &= 24.34\cdot\alpha + 0.73 \\
+y_2(\alpha) &= 25.2 \cdot\alpha + 0.74 \\
+\end{align*}
+\begin{figure}
+	\input{plots/pressure.tikz}
+	\caption{Manual messurements of the pressure cell}
+	\label{fig:preasure}
+\end{figure}
+\printbibliography
+\end{document} 
+

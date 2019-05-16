@@ -1,4 +1,4 @@
-\documentclass[twoside,english,headsepline=on,DIV=12]{scrartcl}
+\documentclass[twoside,english,headsepline=on,DIV=11]{scrartcl}
 
 \usepackage{shellesc}
 \usepackage{amsmath}
@@ -117,6 +117,14 @@ In order to obtain the dispersion relation the cross product of the wave vector 
 \end{align}
 It is important to mention that $\epsilon_\text{r}$ is dependent on $\omega$ and $c=\frac{1}{\sqrt{\epsilon_0 \cdot \mu_0}}$.
 
+As surface plasmons are a phenomenon occuring in the transition area between to mediums, the transition area will be in focus now. The plane between the materials shall be identical with the y-z-plane. Without loss of generality, the wave vector of the incoming light shall be in the x-z-plane. The light shall be p-polarized which means that the electric field does not have a y-component. With this construction the x-component will behave in another way than the z-component. As shown above, the x-component features a steady electric flux density ($\epsilon_1 E_\text{z1} = \epsilon_2 E_\text{z2}$), while the z-component has a steady electric field ($E_\text{x1} = E_\text{x2}$). The wave vector is orthogonal to the electric field, due to the construction that the incoming light has no electric field or wave vector in the y-direction, the wave vector in x-direction is proportional to the dielectric factor while the wave vector in z-direction is the same in both media. Combined with the dispersion relation, the following connections can be build:
+\begin{align}
+k_\text{z}^2 &= \frac{\omega^2}{c^2} \frac{\epsilon_1 \epsilon_2}{\epsilon_1 + \epsilon_2} \label{eq:WavevectorZ} \\
+k_\text{i}^2 &= \frac{\omega^2}{c^2} \frac{\epsilon_\text{i}^2}{\epsilon_1 + \epsilon_2} \label{eq:WavevectorI} \ \ \ \ \  i=1,2
+\end{align}
+In order to obtain surface plasmons an evanescent wave on both sides of the transition area is needed, this means that the electric field is decreasing its amount exponentially with an increasing distance to the transit area. To get a evanescent field $k_\text{i}^2$ needs to be smaller than zero. Surface plasmons are propagating along the transit area, this means that $k_\text{z}^2$ needs to be larger than zero ($k_\text{y}^2$ is zero due to the geometric construction). 
+
+
 A closer look at the equations \ref{eq:WavevectorZ} and \ref{eq:WavevectorI} reveals, that the both dielectric functions need to have opposite signs. What seems to be impossible in the first place can be explained with the Drude model, which applies to media with free electrons such as metals. 
 
 In the Drude model the dielectric function is not a real but a complex function. The Drude model is based on diffential equation with three forces. The inertia force of the electron, a damping force (electrical resistance etc.) depending on the drift velocity of the electron and the force of the electric field of the incoming electromagnetic wave on the electron:
@@ -135,9 +143,17 @@ P_0 &= -n \cdot e \cdot r_0 = \frac{-n \cdot e^2 \cdot E_0}{m(\omega(\omega - i 
 \epsilon (\omega) &= 1 + \frac{P_0}{\epsilon_0 \cdot E_0} = 1 - \frac{n \cdot e^2}{\epsilon_0 \cdot m(\omega(\omega - i \Gamma))} = 1 - \frac{\omega_\text{p}^2}{\omega(\omega - i \Gamma)} \label{eq:DielectricFunction} \\
 \text{mit} \ \ \omega_\text{p}& = \sqrt{\frac{n \cdot e^2}{\epsilon_0 \cdot m}} \label{eq:PlasmaFrequency}
 \end{align}
-
+%
 \section{Experimental Setup}
 The setup consists of two lasers at wavelength 850 nm and 650 nm respectively, which are directed through two polarizers, the first one being of variable angle, the second one of fixed angle. With the first the intensity of the light can be adjusted, while the second one ensures the correct polarity of the exiting light. The next element is a mirror which is mounted on a rotatable desk to which a step motor is connected. Further down in the light path at an angle of 90° to the prior ``arm'' are two lenses that are positioned in a way as to act as a telescope. This is done to keep the light focused on the prism -- which stands behind the two lenses -- while allowing for small rotations of the mirror. After the prism there are again two lenses at an 90° angle to the previous elements that again serve the same purpose of focusing the light into the sensor at the end of the setup.
+A schematic drawing of the setup is shown in Figure \ref{fig:setup}.
+\begin{figure}
+	\centering
+	\includegraphics[scale=.6]{setup.png}
+	\caption{The setup of the experiment\cite{anleitung}}
+	\label{fig:setup}
+\end{figure}
+
 \subsection{Reflectivity of the mirror}
 First the reflectivity of the mirror is to be measured, i.e. the intensity of the reflected light for different angles $\alpha$ of the mirror. In order for that to be done instead of the prism the photo sensor gets placed behind the two lenses focusing the light reflected from the mirror. The mirror is then rotated 2.5° in each direction from the ``zeroed'' position of 45°. This is done with both lasers. 
 \subsection{Reflectivity of the uncoated prism}
@@ -159,32 +175,24 @@ The results of the measurement of the mirror are depicted in Figure \ref{fig:mir
 		\input{plots/spiegel1_850nm.tikz}
 		\caption{Laser wavenlength 850 nm}
 	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel2_650nm.tikz}
-		\caption{Laser wavenlength 650 nm}
-	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel2_850nm.tikz}
-		\caption{Laser wavenlength 850 nm}
-	\end{subfigure}
 	\caption{The reflectivity of the mirror at two different laser wavelenghts}
 	\label{fig:mirror}
 \end{figure}
 \subsection{Reflectivity of the uncoated prism}
-The intensity of the reflected light of the uncoated prism is shown in Figure \ref{fig:uncoated}. It shows a clear transition from a very low reflectivity to a very high on between $\alpha = -1.8°$ and $\alpha = -0.8°$.
+The intensity of the reflected light of the uncoated prism is shown in Figure \ref{fig:uncoated}. It shows a clear transition from a very low reflectivity to a very high on between $\alpha = -1.8°$ and $\alpha = -0.8°$. The critical angle of total reflectivity is $\alpha_\text{tot} = -0.77°$. As there is no metal on the back of the prism, no negative $\epsilon_\text{r}r$ exists which results in a normal reflection on the transit area between two materials.
 \begin{figure}
 	\input{plots/prismUncoated.tikz}
 	\caption{The reflectivity of the uncoated prism}
 	\label{fig:uncoated}
 \end{figure}
 \subsection{Reflectivity of the coated prisms}
-The intensities of the three silver coating are shown in Figure \ref{fig:Ag}. They all show a clear minimum at a specific angle, of which the 45 nm coating is the most pronounced, since it was in a much better conditions than the other two. Those comparatively bad conditions of the other two may explain their less than ideal form. Curiously the 45 nm coating has its minimum at the smallest angle, followed by the 55 nm coating and lastly the 40 nm coating. 
+The intensities of the three silver coating are shown in Figure \ref{fig:Ag}. They all show a clear minimum at a specific angle, of which the 45 nm coating is the most pronounced, since it was in a much better conditions than the other two. Those comparatively bad conditions of the other two may explain their less than ideal form. Curiously the 45 nm coating has its minimum at the smallest angle, followed by the 55 nm coating and lastly the 40 nm coating. The minima are a result of the surface plasmons. Instead of reflecting the light, the energy is used for the surface plasmons. For thicker metals the minimum is less deep. This is because of the lower field gradient due to the thicker material. 
 \begin{figure}
 	\input{plots/Ag_650nm.tikz}
 	\caption{Three silver coatings that differ in thickness and a laser wavelength of 650 nm}
 	\label{fig:Ag}
 \end{figure}
-In Figure \ref{fig:Ag2} the intensities for the silver coating of 45 nm thickness, which was chosen because of its good condition, are shown for the two different wavelengths of 650 nm and 850 nm. Ignoring the absolute values of the signal, the minimum at 850 nm is more pronounced than the one at 650 nm and also appears at an smaller angle. 
+In Figure \ref{fig:Ag2} the intensities for the silver coating of 45 nm thickness, which was chosen because of its good condition, are shown for the two different wavelengths of 650 nm and 850 nm. Ignoring the absolute values of the signal, the minimum at 850 nm is more pronounced than the one at 650 nm, appears at an smaller angle and is also narrower. This can be explained with the fact, that $\epsilon_\text{r}$ is not constant but frequency dependend. In the case of silver, greater $\omega$  result in a lower amount of the real part which is not as ideal for the surface plasmons and causes another absorption angle. 
 \begin{figure}
 	\input{plots/Ag45nm_850nm.tikz}
 	\caption{The same silver coating of 45 nm at two different laser wavelengths of 650 nm and 850 nm}
@@ -203,14 +211,29 @@ y(\alpha) = m\cdot\alpha + c
 \]
 has been applied to both, resulting in 
 \begin{align*}
-y_1(\alpha) &= -24.34\cdot\alpha + 0.73 \\
-y_2(\alpha) &= -25.2 \cdot\alpha + 0.74 \\
+y_1(\alpha) &= 24.34\cdot\alpha + 0.73 \\
+y_2(\alpha) &= 25.2 \cdot\alpha + 0.74 \\
 \end{align*}
+Taking the mean of both factors this gives a relation between preasure and angle of the minimum of 
+\[
+m = (24.8\pm 0.4) \frac{\si{bar}}{\si{°}}
+\]
+This can be explained with the pressure dependent defraction index of air. It is a linear function with an offset of 1.
 \begin{figure}
 	\input{plots/pressure.tikz}
 	\caption{Manual messurements of the pressure cell}
 	\label{fig:preasure}
 \end{figure}
+\section{Conclusion}
+This series of experiments dealt with a basic setup to measure the effects of surface plasmons, which were excited using the Kretschmann configuration. 
+
+Unfortunately the first part of measuring the reflectivity of the mirror used to project the light onto the probe was inconclusive, probably due to an improper setup and faulty gear. 
+
+The probing of the uncoated prism lead to the expected curve, were a clear shift from bearly none to a steady maximum of intensity in reflectivity is seen, which corresponds to the shift toward total reflection.
+
+The measurements regarding the different coatings, and therefore the actual surface plasmons, showed the characteristic form with a steep minimum in the reflectivity where the energy of the light is responsible for the creation of those plasmons. Due to the varying conditions of the coatings the theoretical expectations of a clear relation between thickness and intensity. The comparision of the two different wavelengths of the laser however nicely display a narrower minimum at the greater wavelength. This is also the case for the gold coated prism.
+
+Finally the preasure cell yielded a linear relation between the angle of the minimum and the preasure of $m = (24.8\pm 0.4) \frac{\si{bar}}{\si{°}}$.
 \printbibliography
 \end{document} 
 

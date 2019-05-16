@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  11 MAY 2019 12:31
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  13 MAY 2019 08:27
  system commands enabled.
 **plasmons.tex
 (./plasmons.tex
@@ -94,16 +94,16 @@ Package typearea, 2017/01/03 v3.22 KOMA-Script package (type area)
 \ta@temp=\skip45
 \footheight=\skip46
 Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 12
+(typearea)             DIV  = 11
 (typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 448.13095pt
-(typearea)              DIV departure   = -14%
-(typearea)              \evensidemargin = 27.31467pt
-(typearea)              \oddsidemargin  = -22.47766pt
+(typearea)              \textwidth      = 434.55125pt
+(typearea)              DIV departure   = -10%
+(typearea)              \evensidemargin = 36.3678pt
+(typearea)              \oddsidemargin  = -17.9511pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 609.40027pt
-(typearea)              \topmargin      = -1.84941pt
+(typearea)              \textheight     = 582.20026pt
+(typearea)              \topmargin      = 4.55246pt
 (typearea)              \headheight     = 17.0pt
 (typearea)              \headsep        = 20.40001pt
 (typearea)              \topskip        = 11.0pt
@@ -2633,110 +2633,71 @@ Non-PDF special ignored!
 LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sl' in size <10.95> not a
 vailable
 (Font)              Font shape `TU/TeXGyrePagella(0)/m/it' tried instead on inpu
-t line 111.
- [2]
+t line 106.
+ [2] [3] <setup.png, id=22, 433.62pt x 243.91125pt>
+File: setup.png Graphic file (type png)
 
-LaTeX Warning: Reference `eq:WavevectorZ' on page 3 undefined on input line 120.
-
-
-
-LaTeX Warning: Reference `eq:WavevectorI' on page 3 undefined on input line 120.
-
-
-[3] (./plots/spiegel1_650nm.tikz
+<use setup.png>
+Package luatex.def Info: setup.png used on input line 152.
+(luatex.def)             Requested size: 260.17401pt x 146.34787pt.
+ [4] [5<./setup.png>] (./plots/spiegel1_650nm.tikz
 ===== Image 'figures/plasmons-figure0' is up-to-date. ======
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--156
+Overfull \hbox (6.10133pt too wide) in paragraph at lines 1--172
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--156
+Underfull \hbox (badness 10000) in paragraph at lines 1--172
 
  []
 
 (./plots/spiegel1_850nm.tikz
 ===== Image 'figures/plasmons-figure1' is up-to-date. ======
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--160
+Overfull \hbox (6.10133pt too wide) in paragraph at lines 1--176
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--160
+Underfull \hbox (badness 10000) in paragraph at lines 1--176
 
  []
 
-(./plots/spiegel2_650nm.tikz
+(./plots/prismUncoated.tikz
 ===== Image 'figures/plasmons-figure2' is up-to-date. ======
-)
-Underfull \hbox (badness 10000) in paragraph at lines 1--164
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--164
-
- []
-
-(./plots/spiegel2_850nm.tikz
-===== Image 'figures/plasmons-figure3' is up-to-date. ======
-)
-Underfull \hbox (badness 10000) in paragraph at lines 1--168
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--170
-[]$[]$ $[]$
- []
-
-[4] (./plots/prismUncoated.tikz
-===== Image 'figures/plasmons-figure4' is up-to-date. ======
 ) (./plots/Ag_650nm.tikz
-===== Image 'figures/plasmons-figure5' is up-to-date. ======
+===== Image 'figures/plasmons-figure3' is up-to-date. ======
 ) (./plots/Ag45nm_850nm.tikz
-===== Image 'figures/plasmons-figure6' is up-to-date. ======
+===== Image 'figures/plasmons-figure4' is up-to-date. ======
 ) (./plots/Au.tikz
-===== Image 'figures/plasmons-figure7' is up-to-date. ======
-)
-Underfull \vbox (badness 4156) has occurred while \output is active []
+===== Image 'figures/plasmons-figure5' is up-to-date. ======
+) [6] [7<./figures/plasmons-figure0.pdf><./figures/plasmons-figure1.pdf><./figur
+es/plasmons-figure2.pdf>] [8<./figures/plasmons-figure3.pdf><./figures/plasmons-
+figure4.pdf>] (./plots/pressure.tikz
+===== Image 'figures/plasmons-figure6' is up-to-date. ======
+) [9<./figures/plasmons-figure5.pdf>]
+Overfull \hbox (4.77083pt too wide) in paragraph at lines 238--238
+[]\TU/TeXGyrePagella(0)/m/n/10.95 Hen-drik Soppa. “  Ver-such-sauf-bau zur Me
+s-sung von Ober-flächen-plas-mo-nen”. In: (2015). 
+ []
 
- [5<./figures/plasmons-figure0.pdf><./figures/plasmons-figure1.pdf><./figures/pl
-asmons-figure2.pdf><./figures/plasmons-figure3.pdf>] [6<./figures/plasmons-figur
-e4.pdf>]
-[7<./figures/plasmons-figure5.pdf><./figures/plasmons-figure6.pdf>]
-(./plots/pressure.tikz
-===== Image 'figures/plasmons-figure8' is up-to-date. ======
-)
-
-LaTeX Warning: Empty bibliography on input line 214.
-
-[8<./figures/plasmons-figure7.pdf>] [9<./figures/plasmons-figure8.pdf>]
-(./plasmons.aux)
-
-LaTeX Warning: There were undefined references.
-
+[10<./figures/plasmons-figure6.pdf>] [11] (./plasmons.aux)
 Package logreq Info: Writing requests to 'plasmons.run.xml'.
 
 \openout1 = plasmons.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 40847 strings out of 494527
+ 41008 strings out of 494527
  100000,1648299 words of node,token memory allocated
- 580 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 8 attribute, 73 glue_spec, 8 attrib
+ 589 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 9 attribute, 74 glue_spec, 9 attrib
 ute_list, 1 write nodes
-   avail lists: 1:4,2:453,3:114,4:51,5:377,6:2713,7:786,8:77,9:423,10:18,11:215
- 43475 multiletter control sequences out of 65536+600000
- 72 fonts using 17967407 bytes
- 70i,12n,71p,8818b,1640s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:4,2:418,3:118,4:51,5:360,6:3228,7:829,8:62,9:335,10:14,11:264
+ 43667 multiletter control sequences out of 65536+600000
+ 79 fonts using 20368735 bytes
+ 70i,12n,71p,8818b,2313s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.o
 tf></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-mat
 h.otf></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-
@@ -2744,10 +2705,10 @@ math.otf></usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-it
 alic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></usr
 /share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf></usr/s
 hare/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf>
-Output written on plasmons.pdf (9 pages, 167784 bytes).
+Output written on plasmons.pdf (11 pages, 182510 bytes).
 
-PDF statistics: 265 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
+PDF statistics: 235 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

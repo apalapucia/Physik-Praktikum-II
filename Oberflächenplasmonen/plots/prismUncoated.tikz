@@ -1,6 +1,6 @@
 \begin{tikzpicture}[gnuplot]
 %% generated with GNUPLOT 5.2p5a (Gentoo revision r0) (Lua 5.1; terminal rev. 99 , script rev. 107)
-%% Mi 24 Apr 2019 10:03:58 CEST
+%% So 12 Mai 2019 21:12:53 CEST
 \path (0.000,0.000) rectangle (12.500,8.750);
 \gpcolor{color=gp lt color border}
 \gpsetlinetype{gp lt border}
@@ -73,6 +73,7 @@
 \draw[gp path] (11.947,8.441)--(11.947,8.261);
 \node[gp node center] at (11.947,0.677) {$0$};
 \draw[gp path] (1.320,8.441)--(1.320,0.985)--(11.947,0.985)--(11.947,8.441)--cycle;
+\draw[gp path](7.856,0.985)--(7.856,8.441);
 \node[gp node center,rotate=-270] at (0.276,4.713) {Voltage [V]};
 \node[gp node center] at (6.633,0.215) {Angle $\alpha$ [°]};
 \gpcolor{rgb color={0.580,0.000,0.827}}

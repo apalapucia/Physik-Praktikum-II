@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  1 MAY 2019 14:24
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2019.4.24)  13 MAY 2019 08:07
  system commands enabled.
 **\def\tikzexternalrealjob{plasmons}\input{plasmons}
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
@@ -20,7 +20,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.177 seconds
+luaotfload | main : initialization completed in 0.176 seconds
 (./plasmons.tex (/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/01/03 v3.22 KOMA-Script document class (article)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -2484,33 +2484,34 @@ LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
 (Font)              scaled to size 6.9999pt on input line 66.
 No file figures/plasmons-figure2.toc.
+LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sl' in size <10.95> not a
+vailable
+(Font)              Font shape `TU/TeXGyrePagella(0)/m/it' tried instead on inpu
+t line 111.
+The command '\includegraphics [scale=.6]{setup.png}' has been optimized away. Us
+e '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Citation 'anleitung' on page 3 undefined on input line 145.
+
+
+LaTeX Warning: Citation 'anleitung' on page 3 undefined on input line 145.
+
 (./plots/spiegel1_650nm.tikz
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
 sable this.
 ) (./plots/spiegel1_850nm.tikz
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
 sable this.
-) (./plots/spiegel2_650nm.tikz
+) (./plots/prismUncoated.tikz
 \openout4 = figures/plasmons-figure2.dpth
- [2
+ [5
 Non-PDF special ignored!
 
 
 
 
 {/home/ulysses/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./plot
-s/spiegel2_850nm.tikz
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
-sable this.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 71--87
-[]$[]$ $[]$
- []
-
-(./plots/prismUncoated.tikz
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
-sable this.
-) (./plots/Ag_650nm.tikz
+s/Ag_650nm.tikz
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
 sable this.
 ) (./plots/Ag45nm_850nm.tikz
@@ -2524,12 +2525,8 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to di
 sable this.
 )
 
-LaTeX Warning: Empty bibliography on input line 109.
+LaTeX Warning: Empty bibliography on input line 229.
 
-LaTeX Font Info:    Font shape `TU/TeXGyrePagella(0)/m/sl' in size <10.95> not a
-vailable
-(Font)              Font shape `TU/TeXGyrePagella(0)/m/it' tried instead on inpu
-t line 110.
 
 LaTeX Warning: There were undefined references.
 
@@ -2544,19 +2541,19 @@ Package logreq Info: Writing requests to 'figures/plasmons-figure2.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40704 strings out of 494527
+ 40897 strings out of 494527
  100000,1648299 words of node,token memory allocated
- 547 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 7 attribute, 69 glue_spec, 7 attrib
+ 569 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 9 attribute, 70 glue_spec, 9 attrib
 ute_list, 1 write nodes
-   avail lists: 1:4,2:2820,3:822,4:43,5:219,6:1194,7:656,8:33,9:131,10:18,11:93
- 43463 multiletter control sequences out of 65536+600000
- 70 fonts using 17660851 bytes
- 71i,12n,71p,8856b,1596s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:4,2:2543,3:821,4:47,5:401,6:3054,7:833,8:77,9:431,10:18,11:246
+ 43664 multiletter control sequences out of 65536+600000
+ 80 fonts using 20543263 bytes
+ 71i,12n,71p,8856b,1606s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf
 ></usr/share/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.
 otf>
-Output written on figures/plasmons-figure2.pdf (1 page, 9660 bytes).
+Output written on figures/plasmons-figure2.pdf (1 page, 9379 bytes).
 
 PDF statistics: 25 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream

@@ -1,0 +1,44 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{anleitung}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5e8fce9727a45e1cbcb1de113a107298}{%
+           family={Soppa},
+           familyi={S\bibinitperiod},
+           given={Hendrik},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e8fce9727a45e1cbcb1de113a107298}
+      \strng{fullhash}{5e8fce9727a45e1cbcb1de113a107298}
+      \strng{authornamehash}{5e8fce9727a45e1cbcb1de113a107298}
+      \strng{authorfullhash}{5e8fce9727a45e1cbcb1de113a107298}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Versuchsaufbau zur Messung von Oberflächenplasmonen}}
+      \field{year}{2015}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

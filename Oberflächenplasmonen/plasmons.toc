@@ -3,12 +3,13 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Theory}{2}
 \contentsline {section}{\numberline {2}Experimental Setup}{4}
-\contentsline {subsection}{\numberline {2.1}Reflectivity of the mirror}{4}
-\contentsline {subsection}{\numberline {2.2}Reflectivity of the uncoated prism}{4}
-\contentsline {subsection}{\numberline {2.3}Reflectivity of the coated prisms}{4}
-\contentsline {subsection}{\numberline {2.4}Reflectivity of the preasure cell}{4}
-\contentsline {section}{\numberline {3}Results}{5}
-\contentsline {subsection}{\numberline {3.1}Reflectivity of the mirror}{5}
-\contentsline {subsection}{\numberline {3.2}Reflectivity of the uncoated prism}{5}
+\contentsline {subsection}{\numberline {2.1}Reflectivity of the mirror}{5}
+\contentsline {subsection}{\numberline {2.2}Reflectivity of the uncoated prism}{5}
+\contentsline {subsection}{\numberline {2.3}Reflectivity of the coated prisms}{5}
+\contentsline {subsection}{\numberline {2.4}Reflectivity of the preasure cell}{5}
+\contentsline {section}{\numberline {3}Results}{6}
+\contentsline {subsection}{\numberline {3.1}Reflectivity of the mirror}{6}
+\contentsline {subsection}{\numberline {3.2}Reflectivity of the uncoated prism}{6}
 \contentsline {subsection}{\numberline {3.3}Reflectivity of the coated prisms}{6}
-\contentsline {subsection}{\numberline {3.4}Reflectivity of the preasure cell}{6}
+\contentsline {subsection}{\numberline {3.4}Reflectivity of the preasure cell}{9}
+\contentsline {section}{\numberline {4}Conclusion}{10}
