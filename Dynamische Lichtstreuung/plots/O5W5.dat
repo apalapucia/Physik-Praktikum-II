@@ -1,0 +1,74 @@
+#!/usr/bin/gnuplot -persist
+#
+#    
+#    	G N U P L O T
+#    	Version 5.2 patchlevel 5a (Gentoo revision r0)    last modified 2018-10-06 
+#    
+#    	Copyright (C) 1986-1993, 1998, 2004, 2007-2018
+#    	Thomas Williams, Colin Kelley and many others
+#    
+#    	gnuplot home:     http://www.gnuplot.info
+#    	faq, bugs, etc:   type "help FAQ"
+#    	immediate help:   type "help"  (plot window: hit 'h')
+GNUTERM = "qt"
+file1 = "../data/./Ouzo5_Wasser5_10grad-new.txtAuto"
+file2 = "../data/./Ouzo5_Wasser5_15grad-new.txtAuto"
+file3 = "../data/./Ouzo5_Wasser5_20grad-new.txtAuto"
+file4 = "../data/./Ouzo5_Wasser5_25grad-new.txtAuto"
+file5 = "../data/./Ouzo5_Wasser5_30grad-new.txtAuto"
+file6 = "../data/./Ouzo5_Wasser5_35grad-new.txtAuto"
+file7 = "../data/./Ouzo5_Wasser5_40grad-new.txtAuto"
+file8 = "../data/./Ouzo5_Wasser5_5grad-new.txtAuto"
+k = 1.3806e-23
+i = 0.001
+n = 1.33
+l = 5.43e-07
+t = 293
+a = 1.19891217906958e-10
+winkel1 = 10
+b1 = 9.10708497054848e-13
+g1 = 0.35659001030599
+r1 = 2.04438121261961e-14
+FIT_CONVERGED = 1
+FIT_NDF = 9999
+FIT_STDFIT = 0.0105989681997442
+FIT_WSSR = 1.12326893086498
+FIT_P = 1.0
+FIT_NITER = 5
+r1_err = 7.61151303527584e-17
+winkel2 = 15
+b2 = 2.04259709268843e-12
+g2 = 0.244229144916212
+r2 = 2.93946045493183e-14
+r2_err = 1.1706876181208e-16
+winkel3 = 20
+b3 = 3.61516257137712e-12
+g3 = 0.13807544134542
+r3 = 2.38223280328867e-14
+r3_err = 7.2391853334825e-16
+winkel4 = 25
+b4 = 5.61643676028708e-12
+g4 = 0.100556887863265
+r4 = 1.68150650040329e-14
+r4_err = 2.01354029410584e-15
+winkel5 = 30
+b5 = 8.03118875443832e-12
+g5 = 0.104026242166574
+r5 = 1.80163688142108e-14
+r5_err = 3.83012474456373e-15
+winkel6 = 35
+b6 = 1.08410408330882e-11
+g6 = 0.115387559157099
+r6 = 2.30854740229533e-14
+r6_err = 5.69623889821277e-15
+winkel7 = 40
+b7 = 1.40246083252832e-11
+g7 = 0.103051664422124
+r7 = 2.88107941580792e-14
+r7_err = 7.47034784185835e-15
+winkel8 = 5
+b8 = 2.28111140142151e-13
+g8 = 0.401020079960001
+r8 = 8.06710672261785e-15
+r8_err = 2.26813113809617e-17
+#    EOF

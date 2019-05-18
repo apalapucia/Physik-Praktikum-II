@@ -1,0 +1,74 @@
+#!/usr/bin/gnuplot -persist
+#
+#    
+#    	G N U P L O T
+#    	Version 5.2 patchlevel 5a (Gentoo revision r0)    last modified 2018-10-06 
+#    
+#    	Copyright (C) 1986-1993, 1998, 2004, 2007-2018
+#    	Thomas Williams, Colin Kelley and many others
+#    
+#    	gnuplot home:     http://www.gnuplot.info
+#    	faq, bugs, etc:   type "help FAQ"
+#    	immediate help:   type "help"  (plot window: hit 'h')
+GNUTERM = "qt"
+file1 = "../data/./Ouzo5_Wasser10_10grad-new.txtAuto"
+file2 = "../data/./Ouzo5_Wasser10_15grad-new.txtAuto"
+file3 = "../data/./Ouzo5_Wasser10_20grad-new.txtAuto"
+file4 = "../data/./Ouzo5_Wasser10_25grad-new.txtAuto"
+file5 = "../data/./Ouzo5_Wasser10_30grad-new.txtAuto"
+file6 = "../data/./Ouzo5_Wasser10_35grad-new.txtAuto"
+file7 = "../data/./Ouzo5_Wasser10_40grad-new.txtAuto"
+file8 = "../data/./Ouzo5_Wasser10_5grad-new.txtAuto"
+k = 1.3806e-23
+i = 0.001
+n = 1.33
+l = 5.43e-07
+t = 293
+a = 1.19891217906958e-10
+winkel1 = 10
+b1 = 9.10708497054848e-13
+g1 = 0.180948759832766
+r1 = 5.47997142169532e-14
+FIT_CONVERGED = 1
+FIT_NDF = 9999
+FIT_STDFIT = 0.0137794470758893
+FIT_WSSR = 1.89854174401061
+FIT_P = 1.0
+FIT_NITER = 5
+r1_err = 4.21065346047612e-16
+winkel2 = 15
+b2 = 2.04259709268843e-12
+g2 = 0.174191362788947
+r2 = 8.37664838053621e-14
+r2_err = 1.94624818029786e-16
+winkel3 = 20
+b3 = 3.61516257137712e-12
+g3 = 0.114387319551187
+r3 = 9.99605577184818e-14
+r3_err = 3.37789941696879e-16
+winkel4 = 25
+b4 = 5.61643676028708e-12
+g4 = 0.0659012310856397
+r4 = 9.36838841938738e-14
+r4_err = 8.13422063177341e-16
+winkel5 = 30
+b5 = 8.03118875443832e-12
+g5 = 0.0404607051551956
+r5 = 5.0164446376995e-14
+r5_err = 1.82344159312487e-15
+winkel6 = 35
+b6 = 1.08410408330882e-11
+g6 = 0.0260697082827381
+r6 = 1.16112139820283e-14
+r6_err = 1.77697234299759e-15
+winkel7 = 40
+b7 = 1.40246083252832e-11
+g7 = 0.0189278277639627
+r7 = 1.2366595409203e-14
+r7_err = 2.24276410048947e-15
+winkel8 = 5
+b8 = 2.28111140142151e-13
+g8 = 0.305219470062039
+r8 = 2.92241203455283e-14
+r8_err = 7.37406724220307e-17
+#    EOF

@@ -1,0 +1,32 @@
+set terminal pdf
+
+file1 = "../data/Ouzo5_Wasser5_10grad-new.txtAuto"
+file2 = "../data/Ouzo5_Wasser5_15grad-new.txtAuto"
+file3 = "../data/Ouzo5_Wasser5_20grad-new.txtAuto"
+file4 = "../data/Ouzo5_Wasser5_25grad-new.txtAuto"
+file5 = "../data/Ouzo5_Wasser5_30grad-new.txtAuto"
+file6 = "../data/Ouzo5_Wasser5_35grad-new.txtAuto"
+file7 = "../data/Ouzo5_Wasser5_40grad-new.txtAuto"
+file8 = "../data/Ouzo5_Wasser5_5grad-new.txtAuto"
+
+set output "Ouzo5_Wasser5.pdf"
+set logscale x
+
+k=1.3806e-023
+i=1e-03
+n=1.33
+l=543e-09
+t=293
+a=(16*k*t*pi*n**2)/(3*i**3)
+
+winkel=15
+b=a*sin(winkel*pi/180/2)**2
+
+g=2.442291449162121708e-01
+r=1e-14
+f(x)=g*exp(-b*x/r)
+
+
+fit f(x) file2 via r
+
+plot file2 using 1:2 w l notitle, f(x)

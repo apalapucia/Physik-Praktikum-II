@@ -68,115 +68,111 @@ Group B30}
 \tableofcontents
 \newpage
 \section{Theory}
-In order to describe surface plasmons the Maxwell equations are needed, as they are the theoretical fundament of electrodynamics. The four Maxwell equations lead to four boundary conditions at the transition area between two optical mediums, from which two apply to the electric field and two apply to the magnetic field. 
-
-The first maxwell equation
-\begin{align}
-\vec{\nabla} \cdot \vec{D} = \vec{\nabla} \cdot \vec{E}\cdot \epsilon_0 \cdot \epsilon_\text{r} =  \rho_\text{frei} \label{eq:Maxwell1}
-\end{align}
-leads to the condition that the electric flux density needs to be steady in the direction perpendicular to the transition surface, as the density of electrical charges $\rho_\text{frei}$ equals zero inside the transition area. Due to the fact that the $\epsilon_\text{r}$ of the two media are not the same, the electric field is not steady.
-
-Like the first Maxwell equation describes the electric flux density, the second Maxwell equation is about the magnetic flux density. Thus that no magnetic monopoles exist, the right side of the second Maxwell equation
-\begin{align}
-\vec{\nabla} \cdot \vec{B} = \vec{\nabla} \cdot \vec{H}\cdot \mu_0 \cdot \mu_\text{r} =  0 \label{eq:Maxwell2}
-\end{align}
-always equals zero. Like the electric flux density, the magnetic flux density needs to be steady in the direction perpendicular to the transit area. In most cases, the magnetic permeability is close to one. As a result the magnetic field can be assumed as steady too.
-
-The third Maxwell equation 
-\begin{align}
-\vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \label{eq:Maxwell3}
-\end{align}
-can be used to describe the electric field parallel to the transition area. In consequence of the second Maxwell equation the magnetic flux density is steady. This leads, coupled with the third Maxwell equation, to a steadiness of the electric field parallel to the transition area.
-
-The last Maxwell equation 
-\begin{align}
-\vec{\nabla} \times \vec{H} = \vec{j_\text{frei}} + \frac{\partial \vec{D}}{\partial t} \label{eq:Maxwell4}
-\end{align}
-is about the magnetic field. The absence of free charges leads to an absence of a current density ($\overrightarrow{j_\text{frei}} = 0$). With the steadiness of the electric flux density resulting from the first Maxwell equation, the magnetic field parallel to the transit area is steady too.
-
-In absence of free electrical charges, the third and fourth Maxwell equation can be combined to the wave equation:
-\begin{align}
-\vec{\nabla}^2 \vec{E} = \epsilon_0 \epsilon_\text{r} \mu_0 \mu_\text{r} \frac{\partial^2}{\partial t^2} \vec{E} \label{eq:Waveequation}
-\end{align} 
-The wave equation can be solved with the approach of a plane wave. With linear combinations of plane waves, every other wave form can be build. A plane electromagnetical wave is described as
-\begin{align}
-\vec{E} = \vec{E_0} exp(\vec{k}\vec{r} - \omega t)
-\end{align}
-The approach for the magnetic field is identical. With those approaches the Maxwell equations can be written as:
-\begin{align}
-\vec{k} \cdot \vec{D} &= 0 \label{eq:Maxwell1alt} \\
-\vec{k} \cdot \vec{B} &= 0 \label{eq:Maxwell2alt} \\
-\vec{k} \times \vec{E} &= \omega \vec{B} \label{eq:Maxwell3alt} \\
-\vec{k} \times \vec{H} &= -\omega \epsilon_0 \epsilon_r \vec{E} \label{eq:Maxwell4alt}
-\end{align}
-For further considerations the dispersion relation is very important. The dispersion relation describes the correlation between the absolut amount of the wavevector $k$ and the angular velocity $\omega$. The dispersion relation can be used to calculate the phase velocity $\frac{\omega}{k}$ and the group velocity $\frac{d\omega}{dk}$. 
-
-In order to obtain the dispersion relation the cross product of the wave vector $k$ and equation \ref{eq:Maxwell3alt} is calculated. The result is
-\begin{align}
-\vec{k}^2 = \epsilon_\text{r} \frac{\omega^2}{c^2} \label{eq:Dispersionrelation}
-\end{align}
-It is important to mention that $\epsilon_\text{r}$ is dependent on $\omega$ and $c=\frac{1}{\sqrt{\epsilon_0 \cdot \mu_0}}$.
-
-A closer look at the equations \ref{eq:WavevectorZ} and \ref{eq:WavevectorI} reveals, that the both dielectric functions need to have opposite signs. What seems to be impossible in the first place can be explained with the Drude model, which applies to media with free electrons such as metals. 
-
-In the Drude model the dielectric function is not a real but a complex function. The Drude model is based on diffential equation with three forces. The inertia force of the electron, a damping force (electrical resistance etc.) depending on the drift velocity of the electron and the force of the electric field of the incoming electromagnetic wave on the electron:
-\begin{align}
-m \frac{\partial v}{\partial t} + m \frac{v_\text{d}}{\tau} &= -e E \label{eq:Drude1} \\
-m \frac{d^2 r}{dt^2} + m \Gamma \frac{dr}{dt} &= -e E_0 exp(-i \omega t) \label{eq:Drude2} \ \ \ \ \ \Gamma = \frac{1}{\tau}
-\end{align}
-The solution of equation \ref{eq:Drude2} is an oscillating function:
-\begin{align}
-r(t) = r_0 exp(-i \omega t) = \frac{e E_0}{m(\omega(\omega - i \Gamma))} exp(-i \omega t) \label{eq:DrudeSolution}
-\end{align}
-
-The dielectric function is dependent on the polarizability of the medium. The polarizibility can be calculated as the Polarisation divided by the electric field:
-\begin{align}
-P_0 &= -n \cdot e \cdot r_0 = \frac{-n \cdot e^2 \cdot E_0}{m(\omega(\omega - i \Gamma))} \label{eq:Polarisation} \\
-\epsilon (\omega) &= 1 + \frac{P_0}{\epsilon_0 \cdot E_0} = 1 - \frac{n \cdot e^2}{\epsilon_0 \cdot m(\omega(\omega - i \Gamma))} = 1 - \frac{\omega_\text{p}^2}{\omega(\omega - i \Gamma)} \label{eq:DielectricFunction} \\
-\text{mit} \ \ \omega_\text{p}& = \sqrt{\frac{n \cdot e^2}{\epsilon_0 \cdot m}} \label{eq:PlasmaFrequency}
-\end{align}
-
-
-
+\section{Auswertung}
+\begin{landscape}
 \begin{figure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel1_650nm.tikz}
-		\caption{Laser wavenlength 650 nm}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_5grad.tikz}
+		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel1_850nm.tikz}
-		\caption{Laser wavenlength 850 nm}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_10grad.tikz}
+		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel2_650nm.tikz}
-		\caption{Laser wavenlength 650 nm}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_15grad.tikz}
+		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{.48\textwidth}
-		\input{plots/spiegel2_850nm.tikz}
-		\caption{Laser wavenlength 850 nm}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_20grad.tikz}
+		\caption{}
 	\end{subfigure}
-	\caption{The reflectivity of the mirror at two different laser wavelenghts}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_25grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_30grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_35grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W5_40grad.tikz}
+		\caption{}
+	\end{subfigure}
 \end{figure}
 \begin{figure}
-	\input{plots/prismUncoated.tikz}
-	\caption{The reflectivity of the uncoated prism}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_5grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_10grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_15grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_20grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_25grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_30grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_35grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W10_40grad.tikz}
+		\caption{}
+	\end{subfigure}
 \end{figure}
 \begin{figure}
-	\input{plots/Ag_650nm.tikz}
-	\caption{Three silver coatings that differ in thickness and a laser wavelength of 650 nm}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_5grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_10grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_15grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_20grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_25grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_30grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_35grad.tikz}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\input{plots/O5W15_40grad.tikz}
+		\caption{}
+	\end{subfigure}
 \end{figure}
-\begin{figure}
-	\input{plots/Ag45nm_850nm.tikz}
-	\caption{The same silver coating of 45 nm at two different laser wavelengths of 650 nm and 850 nm}
-\end{figure}
-\begin{figure}
-	\input{plots/Au.tikz}
-	\caption{The gold coating at the two wavelengths of 650 nm and 850 nm}
-\end{figure}
-\begin{figure}
-	\input{plots/pressure.tikz}
-	\caption{Manual messurements of the pressure cell}
-\end{figure}
+\end{landscape}
 \printbibliography
 \end{document} 
 
